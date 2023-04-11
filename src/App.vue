@@ -121,41 +121,43 @@ function reset() {
 <template>
   <img src="./assets/logo.svg" alt="logo" class="m-auto p-10" />
 
-  <form
-    class="gap-10 bg-white rounded-t-3xl p-8 md:p-10 max-w-4xl m-auto font-mono md:grid md:rounded-b-3xl md:grid-cols-2"
-    @reset="reset"
-  >
-    <div class="space-y-6">
-      <Input
-        v-bind="BILL_PROPS"
-        v-model="VALUES.bill"
-        v-model:error="ERRORS.bill"
-      />
+  <div class="md:mx-4 md:mb-4">
+    <form
+      class="gap-10 bg-white rounded-t-3xl p-8 md:p-10 max-w-4xl m-auto font-mono md:grid md:rounded-b-3xl md:grid-cols-2"
+      @reset="reset"
+    >
+      <div class="space-y-6">
+        <Input
+          v-bind="BILL_PROPS"
+          v-model="VALUES.bill"
+          v-model:error="ERRORS.bill"
+        />
 
-      <Select
-        name="percentage"
-        v-model:error="ERRORS.tipPercentage"
-        v-model="VALUES.tipPercentage"
-        :options="OPTIONS"
-      />
+        <Select
+          name="percentage"
+          v-model:error="ERRORS.tipPercentage"
+          v-model="VALUES.tipPercentage"
+          :options="OPTIONS"
+        />
 
-      <Input
-        v-bind="NUMBER_OF_PEOPLE_PROPS"
-        v-model="VALUES.numberOfPeople"
-        v-model:error="ERRORS.numberOfPeople"
-      />
-    </div>
+        <Input
+          v-bind="NUMBER_OF_PEOPLE_PROPS"
+          v-model="VALUES.numberOfPeople"
+          v-model:error="ERRORS.numberOfPeople"
+        />
+      </div>
 
-    <div>
-      <Output
-        class="-mx-2 md:mx-0"
-        :bill="VALUES.bill"
-        :tip-percentage="VALUES.tipPercentage"
-        :number-of-people="VALUES.numberOfPeople"
-        :any-has-error="ANY_HAS_ERROR"
-        :any-has-value="ANY_HAS_VALUE"
-        :any-are-empty="ANY_ARE_EMPTY"
-      />
-    </div>
-  </form>
+      <div>
+        <Output
+          class="-mx-2 md:mx-0"
+          :bill="VALUES.bill"
+          :tip-percentage="VALUES.tipPercentage"
+          :number-of-people="VALUES.numberOfPeople"
+          :any-has-error="ANY_HAS_ERROR"
+          :any-has-value="ANY_HAS_VALUE"
+          :any-are-empty="ANY_ARE_EMPTY"
+        />
+      </div>
+    </form>
+  </div>
 </template>
