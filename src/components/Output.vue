@@ -30,6 +30,11 @@ const TOTAL = computed(() => {
 
   return ((BILL + TIP) / NUMBER_OF_PEOPLE).toFixed(2);
 });
+
+const BUTTON_TOGGLE = computed(() => ({
+  "cursor-pointer opacity-100": props.anyHasValue,
+  "cursor-not-allowed opacity-25": !props.anyHasValue,
+}));
 </script>
 
 <template>
@@ -58,8 +63,8 @@ const TOTAL = computed(() => {
     </div>
 
     <button
-      class="block rounded-md p-2 text-center opacity-25 cursor-not-allowed uppercase w-full bg-cyan-500 text-cyan-900"
-      :class="{ 'opacity-100 cursor-default': anyHasValue }"
+      class="block rounded-md p-2 text-center uppercase w-full bg-cyan-500 text-cyan-900"
+      :class="BUTTON_TOGGLE"
       type="reset"
     >
       reset
