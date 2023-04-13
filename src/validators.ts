@@ -11,7 +11,7 @@ export function hasWhitespace(value: string): boolean {
 }
 
 export function isDecimal(value: string): boolean {
-  return /^\d+\.\d+$/.test(value);
+  return /^\d+\.\d*$/.test(value);
 }
 
 export function hasLeadingZero(value: string): boolean {
