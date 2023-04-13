@@ -56,13 +56,11 @@ const BILL_PROPS: IInputProps = {
   },
   icon: dollarIcon,
   validator(value) {
-    if (isEmpty(value)) return null;
-
     if (hasWhitespace(value)) return "Can't have whitespace";
     if (isZero(value)) return "Can't be zero";
     if (hasLetter(value)) return "Can't have letters";
     if (hasLeadingZero(value)) return "Can't have leading zero";
-    if (!isDecimal(value)) return "";
+    if (!isDecimal(value) && hasSymbol(value)) return "Can't have symbol";
 
     return null;
   },
@@ -80,6 +78,13 @@ const NUMBER_OF_PEOPLE_PROPS: IInputProps = {
     error: true,
   },
   validator(value) {
+    if (hasWhitespace(value)) return "Can't have whitespace";
+    if (isZero(value)) return "Can't be zero";
+    if (hasLetter(value)) return "Can't have letters";
+    if (hasLeadingZero(value)) return "Can't have leading zero";
+    if (isDecimal(value)) return "Can't be decimal";
+    if (hasSymbol(value)) return "Can't have symbol";
+
     return null;
   },
 };
