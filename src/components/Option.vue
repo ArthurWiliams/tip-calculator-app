@@ -28,7 +28,7 @@ function emit(event: Event) {
 
 <template>
   <label
-    class="px-2 py-2 w-full block select-none text-center rounded-md cursor-pointer text-xl text-white bg-cyan-900"
+    class="px-2 py-[0.6rem] w-full block select-none text-center rounded-md cursor-pointer text-xl text-white bg-cyan-900"
     :class="SELECTED_STATE"
   >
     <span>{{ label }}</span>
