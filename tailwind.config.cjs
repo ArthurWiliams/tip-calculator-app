@@ -12,7 +12,7 @@ module.exports = {
         900: "hsl(183, 100%, 15%)",
       },
       white: "hsl(0, 0%, 100%)",
-      red: "hsl(0, 60%, 48%)",
+      red: "hsl(10, 91%, 54%)",
     },
     fontFamily: {
       mono: ["Space Mono", "monospace"],
