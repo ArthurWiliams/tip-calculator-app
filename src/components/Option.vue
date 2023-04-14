@@ -16,8 +16,8 @@ const IS_SELECTED = computed(() => props.value === props.modelValue);
 
 const SELECTED_STATE = computed(() => {
   return {
-    "!bg-cyan-500": IS_SELECTED.value,
-    "!text-cyan-900": IS_SELECTED.value,
+    "bg-cyan-500 text-cyan-900": IS_SELECTED.value,
+    "text-white bg-cyan-900": !IS_SELECTED.value,
   };
 });
 
@@ -28,7 +28,7 @@ function emit(event: Event) {
 
 <template>
   <label
-    class="px-2 py-[0.6rem] w-full block select-none text-center rounded-md cursor-pointer text-xl text-white bg-cyan-900"
+    class="px-2 py-[0.6rem] bg w-full block select-none text-center rounded-md cursor-pointer text-xl active:bg-cyan-300 hover:bg-cyan-300 active:text-cyan-900 hover:text-cyan-900"
     :class="SELECTED_STATE"
   >
     <span>{{ label }}</span>

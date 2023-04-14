@@ -32,7 +32,8 @@ const TOTAL = computed(() => {
 });
 
 const BUTTON_TOGGLE = computed(() => ({
-  "cursor-pointer opacity-100": props.anyHasValue,
+  "cursor-pointer opacity-100 active:bg-cyan-300 hover:bg-cyan-300":
+    props.anyHasValue,
   "cursor-not-allowed opacity-25": !props.anyHasValue,
 }));
 </script>
