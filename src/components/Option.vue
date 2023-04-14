@@ -28,7 +28,7 @@ function emit(event: Event) {
 
 <template>
   <label
-    class="px-2 py-[0.6rem] bg w-full block select-none text-center rounded-md cursor-pointer text-xl active:bg-cyan-300 hover:bg-cyan-300 active:text-cyan-900 hover:text-cyan-900"
+    class="px-2 py-[0.6rem] bg w-full block select-none text-center rounded-md cursor-pointer text-2xl active:bg-cyan-300 hover:bg-cyan-300 active:text-cyan-900 hover:text-cyan-900"
     :class="SELECTED_STATE"
   >
     <span>{{ label }}</span>

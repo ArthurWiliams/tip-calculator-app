@@ -76,7 +76,7 @@ function emit(event: Event) {
         :src="icon"
       />
       <input
-        class="px-4 py-2 placeholder:text-cyan-400 placeholder:opacity-70 rounded-md w-full block text-xl focus:outline outline-2 outline-cyan-500 text-right text-cyan-900 bg-cyan-100"
+        class="px-4 py-2 placeholder:text-cyan-400 placeholder:opacity-70 rounded-md w-full block text-2xl focus:outline outline-2 outline-cyan-500 text-right text-cyan-900 bg-cyan-100"
         type="text"
         autocomplete="off"
         :class="{
