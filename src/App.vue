@@ -128,10 +128,10 @@ function reset() {
 
   <div class="md:mx-4 md:mb-4">
     <form
-      class="gap-10 bg-white rounded-t-3xl p-8 md:p-10 max-w-4xl m-auto font-mono grid md:rounded-b-3xl md:grid-cols-2"
+      class="gap-9 md:gap-10 bg-white rounded-t-3xl p-8 md:p-10 max-w-4xl m-auto font-mono grid md:rounded-b-3xl md:grid-cols-2"
       @reset="reset"
     >
-      <div class="space-y-6 md:space-y-10">
+      <div class="space-y-8 md:space-y-10">
         <Input
           v-bind="BILL_PROPS"
           v-model="VALUES.bill"
