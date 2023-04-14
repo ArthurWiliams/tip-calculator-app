@@ -5,6 +5,13 @@ import Input from "./Input.vue";
 import Option from "./Option.vue";
 
 import { IOption, IInputProps } from "../interfaces";
+import {
+  hasLeadingZero,
+  hasLetter,
+  hasSymbol,
+  hasWhitespace,
+  isDecimal,
+} from "../validators";
 
 const props = defineProps<{
   modelValue?: string;
@@ -31,6 +38,10 @@ const CUSTOM_PROPS: IInputProps = {
     label: false,
   },
   validator(value) {
+    if (hasWhitespace(value)) return "Can't have whitespace";
+    if (hasLetter(value)) return "Can't have letters";
+    if (hasLeadingZero(value)) return "Can't have leading zero";
+    if (!isDecimal(value) && hasSymbol(value)) return "Can't have symbol";
     return null;
   },
 };
