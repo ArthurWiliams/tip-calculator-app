@@ -1,3 +1,5 @@
+const DEFAULT_THEME = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{ts,vue}"],
@@ -17,6 +19,10 @@ module.exports = {
     },
     fontFamily: {
       mono: ["Space Mono", "monospace"],
+    },
+    borderRadius: {
+      ...DEFAULT_THEME.borderRadius,
+      md: "0.32rem",
     },
     extend: {},
   },
