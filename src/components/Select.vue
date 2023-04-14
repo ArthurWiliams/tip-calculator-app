@@ -67,7 +67,7 @@ function emitCustom(value: string) {
         Select Tip <span aria-label="Percentage">%</span>
       </legend>
       <ul
-        class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-3 mt-5"
+        class="grid grid-cols-2 grid-rows-3 md:grid-cols-3 md:grid-rows-2 gap-4 md:gap-[0.85rem] mt-5"
       >
         <li v-for="option in options">
           <Option
