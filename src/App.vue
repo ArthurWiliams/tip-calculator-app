@@ -127,6 +127,8 @@ function reset() {
 </script>
 
 <template>
+  <h1 class="sr-only">Tip Calculator</h1>
+
   <img src="./assets/logo.svg" alt="logo" class="m-auto p-10" />
 
   <div class="md:mx-4 md:mb-4">
