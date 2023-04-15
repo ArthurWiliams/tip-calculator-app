@@ -10,6 +10,7 @@ import personIcon from "./assets/icon-person.svg";
 
 import { IInputProps } from "./interfaces";
 
+// Validators to use in the validation of the fields
 import {
   hasLetter,
   hasWhitespace,
@@ -44,6 +45,7 @@ const ANY_HAS_ERROR = computed(() =>
   Object.values(ERRORS).some((value) => value === true)
 );
 
+// Bill field settings
 const BILL_PROPS: IInputProps = {
   label: "Bill",
   name: "bill",
@@ -66,6 +68,7 @@ const BILL_PROPS: IInputProps = {
   },
 };
 
+// Number of people field settings
 const NUMBER_OF_PEOPLE_PROPS: IInputProps = {
   label: "Number of People",
   name: "numberOfPeople",

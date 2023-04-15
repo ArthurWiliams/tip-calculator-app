@@ -5,6 +5,8 @@ import Input from "./Input.vue";
 import Option from "./Option.vue";
 
 import { IOption, IInputProps } from "../interfaces";
+
+// Validators to use in the validation of the fields
 import {
   hasLeadingZero,
   hasLetter,
@@ -27,6 +29,7 @@ const emits = defineEmits<{
 
 const CUSTOM = ref("");
 
+// Custom field settings
 const CUSTOM_PROPS: IInputProps = {
   label: "Custom",
   name: "custom",
