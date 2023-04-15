@@ -50,7 +50,7 @@ const BUTTON_TOGGLE = computed(() => ({
             <span aria-label="per">/</span> person
           </span>
         </span>
-        <span class="text-3xl md:text-4xl text-cyan-500"> ${{ AMOUNT }} </span>
+        <span class="text-3xl md:text-5xl text-cyan-500"> ${{ AMOUNT }} </span>
       </p>
       <p class="flex justify-between items-center">
         <span>
@@ -59,7 +59,7 @@ const BUTTON_TOGGLE = computed(() => ({
             <span aria-label="per">/</span> person
           </span>
         </span>
-        <span class="text-3xl md:text-4xl text-cyan-500"> ${{ TOTAL }} </span>
+        <span class="text-3xl md:text-5xl text-cyan-500"> ${{ TOTAL }} </span>
       </p>
     </div>
 
