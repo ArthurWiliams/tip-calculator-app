@@ -129,7 +129,7 @@ function reset() {
 <template>
   <h1 class="sr-only">Tip Calculator</h1>
 
-  <img src="./assets/logo.svg" alt="logo" class="m-auto p-10" />
+  <img src="./assets/logo.svg" alt="logo" class="mx-auto my-10 md:mb-14" />
 
   <form
     class="gap-9 md:gap-10 bg-white rounded-t-3xl p-8 md:p-10 max-w-4xl m-auto font-mono grid md:rounded-b-3xl md:grid-cols-2"
